@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Trader dashboard • Prop Radar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+
+<header class="site-header">
+  <div class="container site-header-inner">
+    <a href="index.html" class="brand">
+      <div class="brand-mark">
+        <span>PR</span>
+      </div>
+      <div>
+        <div class="brand-text-title">
+          <span>Prop Radar</span>
+          <span>Alpha</span>
+        </div>
+        <div class="brand-tagline">Prop firm comparison & loyalty</div>
+      </div>
+    </a>
+    <nav class="nav">
+      <a href="index.html">Overview</a>
+      <a href="firms.html">Firms</a>
+      <a href="lists.html">Lists</a>
+      <a href="compare.html">Compare</a>
+      <a href="offers.html">Offers</a>
+      <a href="loyalty.html">Loyalty</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="simulator.html">Simulator</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="how-it-works.html" class="btn">How it works</a>
+      <a href="business.html" class="btn">For prop firms</a>
+      <a href="product-spec.html" class="btn btn-primary">Product spec</a>
+    </div>
+  </div>
+</header>
+
+
+  <main>
+    <section class="section">
+      <div class="container" id="dash-summary">
+        <div class="section-header">
+          <div>
+            <h1 class="section-title">Trader dashboard (concept)</h1>
+            <p class="section-subtitle">
+              In a full product this would track evaluations, funded accounts, payouts and loyalty
+              activity across multiple prop firms.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-3" style="margin-bottom:1.4rem;">
+          <div class="section-card">
+            <div class="card-title">Active challenges</div>
+            <div class="card-value">3</div>
+            <div class="section-subtitle" style="margin-top:0.3rem;">2 Phase 1 · 1 Phase 2 (demo)</div>
+          </div>
+          <div class="section-card">
+            <div class="card-title">Funded accounts</div>
+            <div class="card-value">2</div>
+            <div class="section-subtitle" style="margin-top:0.3rem;">Max allocation: $250,000</div>
+          </div>
+          <div class="section-card">
+            <div class="card-title">Last 30d payouts</div>
+            <div class="card-value">$7,430</div>
+            <div class="stat-pill green" style="margin-top:0.3rem;">+18% vs. prior 30d (demo)</div>
+          </div>
+        </div>
+
+        <div class="split-layout">
+          <section class="section-card">
+            <h2 class="section-title" style="font-size:0.95rem;margin-bottom:0.7rem;">Evaluations</h2>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Firm</th>
+                  <th>Account</th>
+                  <th>Phase</th>
+                  <th>P&amp;L</th>
+                  <th>Rule risk</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>FTMO</td>
+                  <td>$50k</td>
+                  <td>Phase 1</td>
+                  <td><span class="stat-pill green">+3.7%</span></td>
+                  <td class="section-subtitle">Comfortable</td>
+                </tr>
+                <tr>
+                  <td>Apex</td>
+                  <td>$50k</td>
+                  <td>Evaluation</td>
+                  <td><span class="stat-pill red">-1.2%</span></td>
+                  <td class="section-subtitle">Tight trailing drawdown</td>
+                </tr>
+                <tr>
+                  <td>The5ers</td>
+                  <td>$25k</td>
+                  <td>Funded</td>
+                  <td><span class="stat-pill green">+2.4%</span></td>
+                  <td class="section-subtitle">OK</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <aside class="section-card-soft">
+            <h2 class="section-title" style="font-size:0.95rem;margin-bottom:0.7rem;">Rule reminders</h2>
+            <ul style="padding-left:1rem;font-size:0.8rem;color:#94a3b8;margin:0;">
+              <li style="margin-bottom:0.4rem;">FTMO: Daily loss is based on equity at 0:00 platform time.</li>
+              <li style="margin-bottom:0.4rem;">Apex: Trailing drawdown moves with peak equity – be careful with open losses.</li>
+              <li>The5ers: Check specific plan docs for scaling and payout cadence.</li>
+            </ul>
+          </aside>
+        </div>
+      
+        <section class="section-card" style="margin-top:1.2rem;">
+          <h2 class="section-title" style="font-size:0.95rem;margin-bottom:0.4rem;">Favorite firms</h2>
+          <div id="dash-favorites"></div>
+        </section>
+        <section class="section-card-soft" style="margin-top:1.2rem;">
+          <h2 class="section-title" style="font-size:0.95rem;margin-bottom:0.4rem;">Your reviews</h2>
+          <div id="dash-reviews"></div>
+        </section>
+    
+      </div>
+    </section>
+  </main>
+
+
+<footer class="site-footer">
+  <div class="container site-footer-inner">
+    <div>© 2025 Prop Radar. Marketplace demo based on a PropFirmMatch-style specification.</div>
+    <div class="footer-links">
+      <a href="reviews.html">Reviews</a>
+      <a href="offers.html">Offers</a>
+      <a href="business.html">For prop firms</a>
+      <a href="product-spec.html">Product spec</a>
+    </div>
+  </div>
+</footer>
+
+
+
+  <script src="assets/js/storage.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/analytics.js"></script>
+  <script src="assets/js/auth.js"></script>
+  
+  <script src="assets/js/dashboard.js"></script>
+</body>
+</html>

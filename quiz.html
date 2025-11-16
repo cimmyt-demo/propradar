@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Strategy quiz • Prop Radar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+
+<header class="site-header">
+  <div class="container site-header-inner">
+    <a href="index.html" class="brand">
+      <div class="brand-mark">
+        <span>PR</span>
+      </div>
+      <div>
+        <div class="brand-text-title">
+          <span>Prop Radar</span>
+          <span>Alpha</span>
+        </div>
+        <div class="brand-tagline">Prop firm comparison & loyalty</div>
+      </div>
+    </a>
+    <nav class="nav">
+      <a href="index.html">Overview</a>
+      <a href="firms.html">Firms</a>
+      <a href="lists.html">Lists</a>
+      <a href="compare.html">Compare</a>
+      <a href="offers.html">Offers</a>
+      <a href="loyalty.html">Loyalty</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="simulator.html">Simulator</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="how-it-works.html" class="btn">How it works</a>
+      <a href="business.html" class="btn">For prop firms</a>
+      <a href="product-spec.html" class="btn btn-primary">Product spec</a>
+    </div>
+  </div>
+</header>
+
+
+  <main>
+    <section class="section">
+      <div class="container split-layout">
+        <section class="section-card">
+          <div class="section-header" style="margin-bottom:0.5rem;">
+            <div>
+              <h1 class="section-title">Strategy profile quiz</h1>
+              <p class="section-subtitle">Modeled after a “personalized matching” feature on top of the marketplace.</p>
+            </div>
+          </div>
+          <form id="quiz-form">
+            <div class="field">
+              <label>Primary market</label>
+              <select name="market" class="select" required>
+                <option value="">Select market</option>
+                <option value="forex">Forex</option>
+                <option value="indices">Indices</option>
+                <option value="futures">Futures</option>
+                <option value="crypto">Crypto</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label>Typical holding time</label>
+              <select name="holding" class="select" required>
+                <option value="">Select holding style</option>
+                <option value="scalper">Seconds–minutes (scalper)</option>
+                <option value="intraday">Intraday (flat by end of day)</option>
+                <option value="swing">Multi-day swing</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label>Account size you want to target</label>
+              <select name="accountSize" class="select" required>
+                <option value="">Select account size</option>
+                <option value="small">Up to 50k</option>
+                <option value="mid">50k–200k</option>
+                <option value="large">200k+</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label>Comfortable max risk per trade on evaluation</label>
+              <select name="riskPerTrade" class="select" required>
+                <option value="">Select risk</option>
+                <option value="low">0.25–0.5%</option>
+                <option value="medium">0.5–1%</option>
+                <option value="high">1–2%</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label>Experience level with prop firms</label>
+              <select name="experience" class="select" required>
+                <option value="">Select experience</option>
+                <option value="new">New to prop firms</option>
+                <option value="some">1–2 challenges completed</option>
+                <option value="pro">Funded previously</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label>How important are low restrictions vs. high payouts?</label>
+              <select name="preference" class="select" required>
+                <option value="">Select preference</option>
+                <option value="flexibleRules">Very flexible rules</option>
+                <option value="balanced">Balanced rules vs. payouts</option>
+                <option value="maxPayouts">Max possible payout split</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="margin-top:0.6rem;">Generate matches</button>
+          </form>
+        </section>
+
+        <aside class="section-card-soft" id="quiz-results-panel" aria-live="polite">
+          <h2 class="section-title" style="font-size:0.95rem;margin-bottom:0.4rem;">Recommended firms (demo)</h2>
+          <p class="section-subtitle" id="quiz-results-intro">
+            Fill in the quiz on the left and we’ll generate a ranked list of prop firms whose
+            evaluation styles may fit your profile. Data is illustrative only.
+          </p>
+          <div id="quiz-results"></div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+
+<footer class="site-footer">
+  <div class="container site-footer-inner">
+    <div>© 2025 Prop Radar. Marketplace demo based on a PropFirmMatch-style specification.</div>
+    <div class="footer-links">
+      <a href="reviews.html">Reviews</a>
+      <a href="offers.html">Offers</a>
+      <a href="business.html">For prop firms</a>
+      <a href="product-spec.html">Product spec</a>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="assets/js/quiz.js"></script>
+
+  <script src="assets/js/storage.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/analytics.js"></script>
+  <script src="assets/js/auth.js"></script>
+  
+</body>
+</html>

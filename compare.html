@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Compare challenges • Prop Radar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+
+<header class="site-header">
+  <div class="container site-header-inner">
+    <a href="index.html" class="brand">
+      <div class="brand-mark">
+        <span>PR</span>
+      </div>
+      <div>
+        <div class="brand-text-title">
+          <span>Prop Radar</span>
+          <span>Alpha</span>
+        </div>
+        <div class="brand-tagline">Prop firm comparison & loyalty</div>
+      </div>
+    </a>
+    <nav class="nav">
+      <a href="index.html">Overview</a>
+      <a href="firms.html">Firms</a>
+      <a href="lists.html">Lists</a>
+      <a href="compare.html">Compare</a>
+      <a href="offers.html">Offers</a>
+      <a href="loyalty.html">Loyalty</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="simulator.html">Simulator</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="how-it-works.html" class="btn">How it works</a>
+      <a href="business.html" class="btn">For prop firms</a>
+      <a href="product-spec.html" class="btn btn-primary">Product spec</a>
+    </div>
+  </div>
+</header>
+
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <h1 class="section-title">Compare prop firm challenges</h1>
+            <p class="section-subtitle">
+              Side-by-side view of example evaluation plans across firms. In production this would
+              be generated dynamically from a Challenge data model.
+            </p>
+          </div>
+          <span class="badge-outline">Demo data – always verify rules on firm websites</span>
+        </div>
+
+        <div class="section-card-soft">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Firm</th>
+                <th>Plan</th>
+                <th>Steps</th>
+                <th>Account size</th>
+                <th>Profit target</th>
+                <th>Max drawdown</th>
+                <th>Time limit</th>
+                <th>Profit split</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>FTMO</td>
+                <td>Standard Challenge</td>
+                <td>2-step</td>
+                <td>$100K</td>
+                <td>10% + 5%</td>
+                <td>≈10% overall</td>
+                <td>Time-limited</td>
+                <td>Up to ~80%</td>
+              </tr>
+              <tr>
+                <td>The5ers</td>
+                <td>Instant Funding</td>
+                <td>Instant / scaling</td>
+                <td>$40K</td>
+                <td>Scaled profit milestones</td>
+                <td>Firm-specific rules</td>
+                <td>No strict time limit</td>
+                <td>Tiered split</td>
+              </tr>
+              <tr>
+                <td>FundedNext</td>
+                <td>1-Step Evaluation</td>
+                <td>1-step</td>
+                <td>$50K</td>
+                <td>Single target</td>
+                <td>Static or trailing</td>
+                <td>Depends on plan</td>
+                <td>Competitive</td>
+              </tr>
+              <tr>
+                <td>Apex Trader Funding</td>
+                <td>Futures Evaluation</td>
+                <td>1-step</td>
+                <td>$50K</td>
+                <td>Plan-specific target</td>
+                <td>Trailing drawdown</td>
+                <td>No fixed time limit</td>
+                <td>High payouts possible</td>
+              </tr>
+              <tr>
+                <td>Topstep</td>
+                <td>Trading Combine</td>
+                <td>1-step style</td>
+                <td>$50K</td>
+                <td>Profit target combine</td>
+                <td>Account-specific rules</td>
+                <td>Rule-based, not calendar-based</td>
+                <td>Varies by plan</td>
+              </tr>
+              <tr>
+                <td>MyFundedFutures</td>
+                <td>Evaluation</td>
+                <td>1-step</td>
+                <td>$50K</td>
+                <td>Plan-specific target</td>
+                <td>Trailing/overall limits</td>
+                <td>Flexible window</td>
+                <td>Competitive futures split</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="section-subtitle" style="margin-top:0.8rem;">
+            In a live PropFirmMatch-style engine, traders would choose up to N plans to compare,
+            and this table would populate from structured Challenge entities.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+<footer class="site-footer">
+  <div class="container site-footer-inner">
+    <div>© 2025 Prop Radar. Marketplace demo based on a PropFirmMatch-style specification.</div>
+    <div class="footer-links">
+      <a href="reviews.html">Reviews</a>
+      <a href="offers.html">Offers</a>
+      <a href="business.html">For prop firms</a>
+      <a href="product-spec.html">Product spec</a>
+    </div>
+  </div>
+</footer>
+
+
+
+  <script src="assets/js/storage.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/analytics.js"></script>
+  <script src="assets/js/auth.js"></script>
+  
+  <script src="assets/js/compare.js"></script>
+</body>
+</html>

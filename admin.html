@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin console • Prop Radar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+
+<header class="site-header">
+  <div class="container site-header-inner">
+    <a href="index.html" class="brand">
+      <div class="brand-mark">
+        <span>PR</span>
+      </div>
+      <div>
+        <div class="brand-text-title">
+          <span>Prop Radar</span>
+          <span>Alpha</span>
+        </div>
+        <div class="brand-tagline">Prop firm comparison & loyalty</div>
+      </div>
+    </a>
+    <nav class="nav">
+      <a href="index.html">Overview</a>
+      <a href="firms.html">Firms</a>
+      <a href="lists.html">Lists</a>
+      <a href="compare.html">Compare</a>
+      <a href="offers.html">Offers</a>
+      <a href="loyalty.html">Loyalty</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="simulator.html">Simulator</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="how-it-works.html" class="btn">How it works</a>
+      <a href="business.html" class="btn">For prop firms</a>
+      <a href="product-spec.html" class="btn btn-primary">Product spec</a>
+    </div>
+  </div>
+</header>
+
+
+  <main>
+
+    <section class="section">
+      <div class="container split-layout">
+        <section class="section-card">
+          <h1 class="section-title">Admin dashboard (demo)</h1>
+          <p class="section-subtitle">
+            Local-only view of analytics events, reviews and clickouts generated in this browser. In a
+            real build this would be backed by a secure admin API.
+          </p>
+
+          <h2 class="section-title" style="font-size:0.95rem;margin-top:0.8rem;margin-bottom:0.3rem;">Analytics events</h2>
+          <div class="loyalty-grid">
+            <table>
+              <thead><tr><th>Time</th><th>Type</th><th>Payload</th></tr></thead>
+              <tbody id="admin-analytics"></tbody>
+            </table>
+          </div>
+
+          <h2 class="section-title" style="font-size:0.95rem;margin-top:0.8rem;margin-bottom:0.3rem;">Clickouts</h2>
+          <div class="loyalty-grid">
+            <table>
+              <thead><tr><th>Time</th><th>Firm</th><th>Click ID</th><th>Source</th></tr></thead>
+              <tbody id="admin-clicks"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <aside class="section-card-soft">
+          <h2 class="section-title" style="font-size:0.95rem;margin-bottom:0.3rem;">Reviews (local demo)</h2>
+          <div class="loyalty-grid">
+            <table>
+              <thead><tr><th>Firm</th><th>Rating</th><th>User</th><th>Date</th><th>Verified</th></tr></thead>
+              <tbody id="admin-reviews"></tbody>
+            </table>
+          </div>
+          <p class="section-subtitle" style="margin-top:0.6rem;">
+            In production, admins would also be able to change verification status, hide abusive reviews
+            and manage firm-level trust flags.
+          </p>
+        </aside>
+      </div>
+    </section>
+  
+    <section class="section">
+      <div class="container split-layout">
+        <section class="section-card">
+          <h1 class="section-title" style="margin-bottom:0.4rem;">Admin console</h1>
+          <p class="section-subtitle" style="margin-bottom:1rem;">
+            Lightweight static view of firms, rules and sync status. Use as a UI reference.
+          </p>
+
+          <h2 class="section-title" style="font-size:0.9rem;margin-bottom:0.4rem;">Firms</h2>
+          <table class="table" style="margin-bottom:1rem;">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Models</th>
+                <th>Last sync</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>VortexCapital</td>
+                <td>2-phase, 3-phase, direct</td>
+                <td>3 min ago</td>
+                <td><span class="stat-pill green">Healthy</span></td>
+              </tr>
+              <tr>
+                <td>AtlasFlow</td>
+                <td>1-phase, 2-phase</td>
+                <td>11 min ago</td>
+                <td><span class="stat-pill green">Healthy</span></td>
+              </tr>
+              <tr>
+                <td>SignalHouse</td>
+                <td>2-phase</td>
+                <td>27 min ago</td>
+                <td><span class="stat-pill red">Needs review</span></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2 class="section-title" style="font-size:0.9rem;margin-bottom:0.4rem;">Recent changes</h2>
+          <ul style="padding-left:1.1rem;font-size:0.8rem;color:#94a3b8;margin:0;">
+            <li style="margin-bottom:0.35rem;">VortexCapital reduced Phase 1 profit target from 10% → 8%.</li>
+            <li style="margin-bottom:0.35rem;">AtlasFlow added no-time-limit challenge option.</li>
+            <li>SignalHouse tightened news trading restrictions around NFP releases.</li>
+          </ul>
+        </section>
+
+        <aside class="section-card-soft">
+          <h2 class="section-title" style="font-size:0.95rem;margin-bottom:0.7rem;">Rule engine status</h2>
+          <div class="grid grid-2" style="margin-bottom:0.8rem;">
+            <div>
+              <div class="card-title">Total rules</div>
+              <div class="card-value">184</div>
+            </div>
+            <div>
+              <div class="card-title">Pending reviews</div>
+              <div class="card-value">7</div>
+            </div>
+          </div>
+          <p class="section-subtitle">
+            This static page mirrors the look and feel of your admin views but does not connect
+            to live services. Use it in handoff docs, landing pages or demos.
+          </p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+
+<footer class="site-footer">
+  <div class="container site-footer-inner">
+    <div>© 2025 Prop Radar. Marketplace demo based on a PropFirmMatch-style specification.</div>
+    <div class="footer-links">
+      <a href="reviews.html">Reviews</a>
+      <a href="offers.html">Offers</a>
+      <a href="business.html">For prop firms</a>
+      <a href="product-spec.html">Product spec</a>
+    </div>
+  </div>
+</footer>
+
+
+
+  <script src="assets/js/storage.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/analytics.js"></script>
+  <script src="assets/js/auth.js"></script>
+  
+  <script src="assets/js/admin.js"></script>
+</body>
+</html>

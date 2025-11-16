@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Rule simulator • Prop Radar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+
+<header class="site-header">
+  <div class="container site-header-inner">
+    <a href="index.html" class="brand">
+      <div class="brand-mark">
+        <span>PR</span>
+      </div>
+      <div>
+        <div class="brand-text-title">
+          <span>Prop Radar</span>
+          <span>Alpha</span>
+        </div>
+        <div class="brand-tagline">Prop firm comparison & loyalty</div>
+      </div>
+    </a>
+    <nav class="nav">
+      <a href="index.html">Overview</a>
+      <a href="firms.html">Firms</a>
+      <a href="lists.html">Lists</a>
+      <a href="compare.html">Compare</a>
+      <a href="offers.html">Offers</a>
+      <a href="loyalty.html">Loyalty</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="simulator.html">Simulator</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="how-it-works.html" class="btn">How it works</a>
+      <a href="business.html" class="btn">For prop firms</a>
+      <a href="product-spec.html" class="btn btn-primary">Product spec</a>
+    </div>
+  </div>
+</header>
+
+
+  <main>
+    <section class="section">
+      <div class="container split-layout">
+        <section class="section-card">
+          <div class="section-header" style="margin-bottom:0.5rem;">
+            <div>
+              <h1 class="section-title">Challenge rule simulator</h1>
+              <p class="section-subtitle">
+                A sandbox for traders to translate firm rules into risk terms they actually understand.
+              </p>
+            </div>
+          </div>
+
+          <form id="sim-form">
+            <div class="field">
+              <label>Account size (evaluation)</label>
+              <input type="number" name="account" class="input" required min="1000" step="1000" value="50000" />
+            </div>
+
+            <div class="field">
+              <label>Max daily loss (%)</label>
+              <input type="number" name="dailyLoss" class="input" required min="1" max="10" step="0.1" value="5" />
+            </div>
+
+            <div class="field">
+              <label>Max overall loss (%)</label>
+              <input type="number" name="overallLoss" class="input" required min="4" max="20" step="0.1" value="10" />
+            </div>
+
+            <div class="field">
+              <label>Profit target (%)</label>
+              <input type="number" name="profitTarget" class="input" required min="4" max="25" step="0.1" value="8" />
+            </div>
+
+            <div class="field">
+              <label>Average risk per trade (%)</label>
+              <input type="number" name="riskPerTrade" class="input" required min="0.1" max="3" step="0.1" value="1" />
+            </div>
+
+            <div class="field">
+              <label>Estimated win rate (%)</label>
+              <input type="number" name="winRate" class="input" required min="20" max="80" step="1" value="50" />
+            </div>
+
+            <div class="field">
+              <label>Average reward:risk ratio</label>
+              <input type="number" name="rr" class="input" required min="0.5" max="5" step="0.1" value="2" />
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="margin-top:0.6rem;">Run simulation</button>
+          </form>
+        </section>
+
+        <aside class="section-card-soft" id="sim-results-panel" aria-live="polite">
+          <h2 class="section-title" style="font-size:0.95rem;margin-bottom:0.6rem;">Risk &amp; rule summary</h2>
+          <div id="sim-results-intro" class="section-subtitle" style="margin-bottom:0.9rem;">
+            Enter challenge parameters to see rough daily/overall loss amounts, a loose risk-of-ruin
+            estimate and risk-per-trade guidance.
+          </div>
+          <div id="sim-results"></div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+
+<footer class="site-footer">
+  <div class="container site-footer-inner">
+    <div>© 2025 Prop Radar. Marketplace demo based on a PropFirmMatch-style specification.</div>
+    <div class="footer-links">
+      <a href="reviews.html">Reviews</a>
+      <a href="offers.html">Offers</a>
+      <a href="business.html">For prop firms</a>
+      <a href="product-spec.html">Product spec</a>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="assets/js/simulator.js"></script>
+
+  <script src="assets/js/storage.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/analytics.js"></script>
+  <script src="assets/js/auth.js"></script>
+  
+</body>
+</html>

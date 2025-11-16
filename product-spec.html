@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Product specification • Prop Radar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  
+<header class="site-header">
+  <div class="container site-header-inner">
+    <a href="index.html" class="brand">
+      <div class="brand-mark">
+        <span>PR</span>
+      </div>
+      <div>
+        <div class="brand-text-title">
+          <span>Prop Radar</span>
+          <span>Alpha</span>
+        </div>
+        <div class="brand-tagline">Prop firm comparison & loyalty</div>
+      </div>
+    </a>
+    <nav class="nav">
+      <a href="index.html">Overview</a>
+      <a href="firms.html">Firms</a>
+      <a href="lists.html">Lists</a>
+      <a href="compare.html">Compare</a>
+      <a href="offers.html">Offers</a>
+      <a href="loyalty.html">Loyalty</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="simulator.html">Simulator</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="how-it-works.html" class="btn">How it works</a>
+      <a href="business.html" class="btn">For prop firms</a>
+      <a href="product-spec.html" class="btn btn-primary">Product spec</a>
+    </div>
+  </div>
+</header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <h1 class="section-title">Product specification (PropFirmMatch-style)</h1>
+            <p class="section-subtitle">
+              High-level EPICs, user stories and mapped UI surfaces for a prop firm comparison &amp; loyalty
+              platform. This page is meant as a PM/engineering overview, not end-user marketing.
+            </p>
+          </div>
+        </div>
+
+        <div class="section-card-soft">
+          <h2 class="section-title" style="font-size:0.95rem;">EPIC A — Discovery &amp; Comparison</h2>
+          <p class="section-subtitle">
+            Core user flows: search all firms, apply structured filters, and compare challenges side-by-side.
+          </p>
+          <ul style="padding-left:1.1rem;font-size:0.8rem;color:#94a3b8;margin:0 0 0.6rem 0;list-style:disc;">
+            <li><strong>User story A1:</strong> Search all firms with filters for assets, platforms, evaluation type, account size, pricing and restrictions.</li>
+            <li><strong>User story A2:</strong> Compare multiple firms side-by-side on challenge rules.</li>
+            <li><strong>User story A3:</strong> Category pages (Best Futures Firms, Top Crypto Firms, etc.).</li>
+          </ul>
+          <p class="section-subtitle">
+            <strong>Mapped UI:</strong> <a href="firms.html">Firms</a>, <a href="lists.html">Lists</a>, <a href="compare.html">Compare</a>.
+          </p>
+        </div>
+
+        <div class="section-card-soft">
+          <h2 class="section-title" style="font-size:0.95rem;">EPIC B — Firm Profiles &amp; Challenges</h2>
+          <p class="section-subtitle">
+            Data model and UI for firm-level pages and challenge catalogs, with structured rule metadata
+            driving search and comparison.
+          </p>
+          <ul style="padding-left:1.1rem;font-size:0.8rem;color:#94a3b8;margin:0 0 0.6rem 0;list-style:disc;">
+            <li><strong>User story B1:</strong> Firm profile page with rating, years active, country, platforms, assets and trust flags.</li>
+            <li><strong>User story B2:</strong> Challenge catalog with detailed rules (targets, drawdowns, time limits, payout schedule).</li>
+          </ul>
+          <p class="section-subtitle">
+            <strong>Mapped UI:</strong> conceptual firm detail sections implied across <a href="firms.html">Firms</a> and <a href="compare.html">Compare</a> (ready for a dedicated firm-detail template).
+          </p>
+        </div>
+
+        <div class="section-card-soft">
+          <h2 class="section-title" style="font-size:0.95rem;">EPIC C — Reviews, Ratings &amp; Trust</h2>
+          <p class="section-subtitle">
+            Reviews, verified badges and payout/rule-change monitoring to create a trusted layer above
+            simple affiliate listings.
+          </p>
+          <ul style="padding-left:1.1rem;font-size:0.8rem;color:#94a3b8;margin:0 0 0.6rem 0;list-style:disc;">
+            <li><strong>User story C1:</strong> Submit review with rating, min text length and optional proof upload.</li>
+            <li><strong>User story C2:</strong> Verified review badge when purchase is confirmed via proof or affiliate APIs.</li>
+          </ul>
+          <p class="section-subtitle">
+            <strong>Mapped UI:</strong> <a href="reviews.html">Reviews</a>, trust copy on <a href="index.html">Overview</a> and future payout/rule-change feeds.
+          </p>
+        </div>
+
+        <div class="section-card-soft">
+          <h2 class="section-title" style="font-size:0.95rem;">EPIC D — Affiliate Clickout Funnel</h2>
+          <p class="section-subtitle">
+            Click tracking and attribution used to power both revenue and the loyalty program.
+          </p>
+          <ul style="padding-left:1.1rem;font-size:0.8rem;color:#94a3b8;margin:0 0 0.6rem 0;list-style:disc;">
+            <li><strong>User story D1:</strong> Redirect flows that attach affiliate IDs and log click events.</li>
+            <li><strong>User story D2:</strong> Attribution and reconciliation with affiliate networks or partner APIs.</li>
+          </ul>
+          <p class="section-subtitle">
+            <strong>Mapped UI:</strong> “Buy” actions implied on <a href="firms.html">Firms</a>, <a href="compare.html">Compare</a>, <a href="offers.html">Offers</a> and flows described on
+            <a href="how-it-works.html">How it works</a>.
+          </p>
+        </div>
+
+        <div class="section-card-soft">
+          <h2 class="section-title" style="font-size:0.95rem;">EPIC E — Loyalty Points &amp; Rewards</h2>
+          <p class="section-subtitle">
+            Points accrual and redemption mechanics layered over the affiliate engine to increase retention
+            and LTV.
+          </p>
+          <ul style="padding-left:1.1rem;font-size:0.8rem;color:#94a3b8;margin:0 0 0.6rem 0;list-style:disc;">
+            <li><strong>User story E1:</strong> Earn points by uploading order confirmations, with manual or OCR-assisted approval.</li>
+            <li><strong>User story E2:</strong> Redeem points against a transparent rewards table for free plans or discounts.</li>
+          </ul>
+          <p class="section-subtitle">
+            <strong>Mapped UI:</strong> <a href="loyalty.html">Loyalty</a>, confirmation flows described in <a href="how-it-works.html">How it works</a>.
+          </p>
+        </div>
+
+        <div class="section-card-soft">
+          <h2 class="section-title" style="font-size:0.95rem;">EPIC F — Accounts, Favorites &amp; Personalization</h2>
+          <p class="section-subtitle">
+            User accounts tie together points, favorites, reviews and history, enabling personalization
+            and long-term engagement.
+          </p>
+          <ul style="padding-left:1.1rem;font-size:0.8rem;color:#94a3b8;margin:0 0 0.6rem 0;list-style:disc;">
+            <li><strong>User story F1:</strong> Profile dashboard with loyalty balance, proofs and reviews.</li>
+            <li><strong>User story F2:</strong> Favorites list synced across devices.</li>
+          </ul>
+          <p class="section-subtitle">
+            <strong>Mapped UI:</strong> <a href="dashboard.html">Trader dashboard</a> (concept), plus favorites affordances planned for firm lists.
+          </p>
+        </div>
+
+        <div class="section-card-soft">
+          <h2 class="section-title" style="font-size:0.95rem;">EPIC G — Offers, Coupons &amp; Promo Engine</h2>
+          <p class="section-subtitle">
+            Deals hub surfacing coupon codes, time-limited promos and extra-account perks with clear
+            disclosures.
+          </p>
+          <ul style="padding-left:1.1rem;font-size:0.8rem;color:#94a3b8;margin:0 0 0.6rem 0;list-style:disc;">
+            <li><strong>User story G1:</strong> Offers index and detail model with code, discount, validity and targeting rules.</li>
+          </ul>
+          <p class="section-subtitle">
+            <strong>Mapped UI:</strong> <a href="offers.html">Offers</a>, hero badges on <a href="index.html">Overview</a>.
+          </p>
+        </div>
+
+        <div class="section-card-soft">
+          <h2 class="section-title" style="font-size:0.95rem;">EPIC H — Admin Backoffice &amp; Partner Dashboards</h2>
+          <p class="section-subtitle">
+            Internal tools for managing firms, challenges, reviews, loyalty and affiliates, plus a B2B
+            interface for partners.
+          </p>
+          <ul style="padding-left:1.1rem;font-size:0.8rem;color:#94a3b8;margin:0 0 0.6rem 0;list-style:disc;">
+            <li><strong>User story H1:</strong> Admin panel for firm/challenge CRUD, review moderation, loyalty, offers and analytics.</li>
+            <li><strong>User story H2:</strong> Prop firm dashboard with traffic, clicks and performance metrics.</li>
+          </ul>
+          <p class="section-subtitle">
+            <strong>Mapped UI:</strong> <a href="business.html">Prop Firm Business</a>, <a href="admin.html">Admin (concept)</a>.
+          </p>
+        </div>
+
+        <div class="section-card-soft">
+          <h2 class="section-title" style="font-size:0.95rem;">EPIC I &amp; J — Content, Analytics &amp; Anti-Fraud</h2>
+          <p class="section-subtitle">
+            SEO content surfaces for acquisition, plus analytics and anti-fraud systems to protect users
+            and keep rankings trustworthy.
+          </p>
+          <ul style="padding-left:1.1rem;font-size:0.8rem;color:#94a3b8;margin:0 0 0.6rem 0;list-style:disc;">
+            <li><strong>User story I1:</strong> Article publishing system with SEO fields and tagging.</li>
+            <li><strong>User story J1:</strong> Analytics tracking of searches, clicks, conversions and review health.</li>
+            <li><strong>User story J2:</strong> Anti-fraud checks for reviews, order proofs and suspicious patterns.</li>
+          </ul>
+          <p class="section-subtitle">
+            <strong>Mapped UI:</strong> Future content hub, analytics tiles on <a href="index.html">Overview</a> and <a href="business.html">Prop Firm Business</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+<footer class="site-footer">
+  <div class="container site-footer-inner">
+    <div>© 2025 Prop Radar. Marketplace demo based on a PropFirmMatch-style specification.</div>
+    <div class="footer-links">
+      <a href="reviews.html">Reviews</a>
+      <a href="offers.html">Offers</a>
+      <a href="business.html">For prop firms</a>
+      <a href="product-spec.html">Product spec</a>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="assets/js/storage.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/analytics.js"></script>
+  <script src="assets/js/auth.js"></script>
+  
+</body>
+</html>
